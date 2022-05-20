@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Mobile Planet - Cửa hàng di động hàng đầu</title>
+        <title>Máy tính bảng - Mobile Planet</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -47,14 +47,14 @@
                 <div class="dynamic-container">
                     <div class="row">
                         <div class="col-6 col-lg-3 nav-element">
-                            <i class="bi-shopee"></i>
-                            <label>Shopee</label>
-                            <a href="category.php?placeid=shopee" class="stretched-link"></a>
+                            <i class="bi-phone"></i>
+                            <label>ĐIỆN THOẠI DI ĐỘNG</label>
+                            <a href="phone_category.php" class="stretched-link"></a>
                         </div>
                         <div class="col-6 col-lg-3 nav-element">
-                            <i class="bi-lazada"></i>
-                            <label>Lazada</label>
-                            <a href="category.php?placeid=lazada" class="stretched-link"></a>
+                            <i class="bi-tablet"></i>
+                            <label>MÁY TÍNH BẢNG</label>
+                            <a href="tablet_category.php" class="stretched-link"></a>
                         </div>
                         <div class="col-6 col-lg-3 nav-element">
                             <i class="bi-laptop"></i>
@@ -71,20 +71,13 @@
             </nav>
 
             <main class="content dynamic-container">
-
-                <h3 class="title">Voucher nổi bật</h3>
-                <div id="phones-carousel" style="min-height: 425px;" class="carousel slide my-carousel" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <?php 
-                            require_once($_SERVER['DOCUMENT_ROOT']."/dashboard/vouchery/controllers/index_controller.php");
-                            $controller = new IndexController();
-                            $controller->product_invoke();
-                        ?>
-                    </div>
+                <div id="products-holder" class="products-holder row">
+                <?php
+                    require_once($_SERVER['DOCUMENT_ROOT']."/dashboard/vouchery/controllers/filter_controller.php");
+                    $controller = new FilterController();
+                    $controller->category_invoke();
+                ?>
                 </div>
-
-                
-
             </main>
 
             <footer class="footer">
@@ -111,5 +104,6 @@
             </footer>
 
         </div>
+
     </body>
 </html>
