@@ -1,5 +1,5 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT']."/models/user_model.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/dashboard/vouchery/models/user_model.php");
 
 class UserController
 {
@@ -16,16 +16,9 @@ class UserController
         if (isset($_SESSION['user_id'])) {
             $this->clickLogout();
             $this->clickUpdate();
-            include($_SERVER['DOCUMENT_ROOT']."/views/user_profile.php");
-        } else if (isset($_GET['page']) && $_GET['page'] == "signup") {
-            $this->clickSignup();
-            include($_SERVER['DOCUMENT_ROOT']."/views/signup.php");
-        } else if (isset($_GET['page']) && $_GET['page'] == "login") {
-            $this->clickLogin();
-            include($_SERVER['DOCUMENT_ROOT']."/views/login.php");
+            include($_SERVER['DOCUMENT_ROOT'] . "/dashboard/vouchery/views/user_profile.php");
         } else {
-            $this->clickLogin();
-            include($_SERVER['DOCUMENT_ROOT']."/views/login.php");
+            include($_SERVER['DOCUMENT_ROOT'] . "/dashboard/vouchery/views/login.php");
         }
     }
 
@@ -39,22 +32,21 @@ class UserController
 
     private function clickSignup()
     {
-        if (isset($_POST['signup'])) {
+        if (isset($_POST['signup']) && $_POST['signup'] == "signup") {
             $this->usermodel->signup();
         }
     }
 
     private function clickLogin()
     {
-        if (isset($_POST['login'])) {
+        if (isset($_POST['login']) && $_POST['login'] == "login") {
             $this->usermodel->login();
         }
     }
 
     private function clickLogout()
     {
-        if (isset($_GET['action']) && $_GET['action'] == "logout")
-        {
+        if (isset($_GET['action']) && $_GET['action'] == "logout") {
             $this->usermodel->logout();
         }
     }

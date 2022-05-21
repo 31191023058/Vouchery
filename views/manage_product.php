@@ -1,5 +1,5 @@
 <?php
-    $this->clickSignup();
+session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -11,10 +11,13 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/ulg/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/dashboard/vouchery/styles/style.css">
     <link rel="stylesheet" href="/dashboard/vouchery/styles/form_style.css">
+    <link rel="stylesheet" href="/dashboard/vouchery/styles/manage_product.css">
     <script src="/scripts/script.js"></script>
+
 </head>
 
 <body>
@@ -80,59 +83,66 @@
         </nav>
 
         <main class="content dynamic-container">
-            <section class="h-100">
-                <div class="container h-100">
-                    <div class="row justify-content-md-center h-100">
-                        <div class="card-wrapper">
-                            <div class="card fat">
-                                <div class="card-body">
-                                    <h4 class="card-title">Đăng ký</h4>
-                                    <form method="POST">
-                                        <div class="form-group">
-                                            <label for="user_phone">Số điện thoại</label>
-                                            <input id="user_phone" type="tel" class="form-control" name="user_phone"
-                                                required autofocus>
-                                        </div>
+            <section class="h-100" style="margin-bottom: 3rem;">
 
-                                        <div class="form-group">
-                                            <label for="user_password">Mật khẩu</label>
-                                            <input id="user_password" type="password" class="form-control"
-                                                name="user_password" required data-eye>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="repeat_password">Nhập lại mật khẩu</label>
-                                            <input id="repeat_password" type="password" class="form-control"
-                                                name="repeat_password" required data-eye>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="user_name">Họ tên</label>
-                                            <input id="user_name" type="text" class="form-control" name="user_name"
-                                                required autofocus>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="user_address">Địa chỉ</label>
-                                            <input id="user_address" type="text" class="form-control"
-                                                name="user_address" required autofocus>
-                                        </div>
-
-                                        <div class="form-group m-0">
-                                            <button type="submit" name="signup" class="btn btn-primary btn-block"
-                                                value="signup">
-                                                Đăng ký
-                                            </button>
-                                        </div>
-                                        <div class="mt-4 text-center">
-                                            Đã có tài khoản? <a href="login.php">Đăng nhập</a>
-                                        </div>
-                                    </form>
+                <div class="container-xl">
+                    <div class="table-responsive">
+                        <div class="table-wrapper">
+                            <div class="table-title">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <h2>Manage <b>Products</b></h2>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <a href="add_product.php" class="btn btn-success"><i
+                                                class="material-icons">&#xE147;</i> <span>Add New
+                                                Product</span></a>
+                                        <a href="manage_product.php?deletedallproduct=true" class="btn btn-danger"
+                                            data-toggle="modal"><i class="material-icons">&#xE15C;</i>
+                                            <span>Delete</span></a>
+                                    </div>
                                 </div>
                             </div>
+                            <table class="table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <span class="custom-checkbox">
+                                                <input type="checkbox" id="selectAll">
+                                                <label for="selectAll"></label>
+                                            </span>
+                                        </th>
+                                        <th>Thumbnail</th>
+                                        <th>Product Name</th>
+                                        <th>Category</th>
+                                        <th>Type</th>
+                                        <th>Price</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                    require_once($_SERVER['DOCUMENT_ROOT']."/dashboard/vouchery/controllers/product_controller.php");
+                                    $controller = new ProductController();
+                                    $controller->productInvoke();
+                                    ?>
+                                </tbody>
+                            </table>
+                            <!-- <div class="clearfix">
+                                <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
+                                <ul class="pagination">
+                                    <li class="page-item disabled"><a href="#">Previous</a></li>
+                                    <li class="page-item"><a href="#" class="page-link">1</a></li>
+                                    <li class="page-item"><a href="#" class="page-link">2</a></li>
+                                    <li class="page-item active"><a href="#" class="page-link">3</a></li>
+                                    <li class="page-item"><a href="#" class="page-link">4</a></li>
+                                    <li class="page-item"><a href="#" class="page-link">5</a></li>
+                                    <li class="page-item"><a href="#" class="page-link">Next</a></li>
+                                </ul>
+                            </div> -->
                         </div>
                     </div>
-                </div>
+                </div> 
             </section>
         </main>
 

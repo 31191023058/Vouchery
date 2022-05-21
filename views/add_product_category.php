@@ -1,6 +1,3 @@
-<?php
-    $this->clickSignup();
-?>
 <!DOCTYPE html>
 <html>
 
@@ -80,52 +77,47 @@
         </nav>
 
         <main class="content dynamic-container">
-            <section class="h-100">
+            <section class="h-100" style="margin-bottom: 3rem;">
                 <div class="container h-100">
-                    <div class="row justify-content-md-center h-100">
-                        <div class="card-wrapper">
+                    <div class="row h-100 justify-content-start">
+                        <div class="border-end col-3" id="sidebar-wrapper">
+                            <div class="list-group list-group-flush">
+                                <a class="list-group-item list-group-item-action p-3 " href="user_invoke.php">Tài
+                                    khoản</a>
+                                <a class="list-group-item list-group-item-action p-3" href="add_product.php">Bán
+                                    Voucher</a>
+                                <a class="list-group-item list-group-item-action p-3"
+                                    href="add_product_category.php">Thêm
+                                    Category</a>
+                                <a class="list-group-item list-group-item-action p-3" href="add_product_type.php">Thêm
+                                    Type</a>
+                                <a class=" list-group-item list-group-item-action p-3" href="manage_product.php">All
+                                    Products
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-wrapper col-6" style="padding: 0px;">
                             <div class="card fat">
                                 <div class="card-body">
-                                    <h4 class="card-title">Đăng ký</h4>
+                                    <h4 class="card-title " style="width:800px; margin:0 auto;">Thêm Category</h4>
                                     <form method="POST">
                                         <div class="form-group">
-                                            <label for="user_phone">Số điện thoại</label>
-                                            <input id="user_phone" type="tel" class="form-control" name="user_phone"
-                                                required autofocus>
+                                            <label for="category_name">Category Name</label>
+                                            <input id="category_name" type="text" class="form-control"
+                                                name="category_name" required autofocus>
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="user_password">Mật khẩu</label>
-                                            <input id="user_password" type="password" class="form-control"
-                                                name="user_password" required data-eye>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="repeat_password">Nhập lại mật khẩu</label>
-                                            <input id="repeat_password" type="password" class="form-control"
-                                                name="repeat_password" required data-eye>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="user_name">Họ tên</label>
-                                            <input id="user_name" type="text" class="form-control" name="user_name"
-                                                required autofocus>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="user_address">Địa chỉ</label>
-                                            <input id="user_address" type="text" class="form-control"
-                                                name="user_address" required autofocus>
+                                            <label for="category_ename">Ename</label>
+                                            <input id="category_ename" type="text" class="form-control"
+                                                name="category_ename" required autofocus>
                                         </div>
 
                                         <div class="form-group m-0">
-                                            <button type="submit" name="signup" class="btn btn-primary btn-block"
-                                                value="signup">
-                                                Đăng ký
+                                            <button type="submit" name="add_category" class="btn btn-primary btn-block"
+                                                value="add">
+                                                Add
                                             </button>
-                                        </div>
-                                        <div class="mt-4 text-center">
-                                            Đã có tài khoản? <a href="login.php">Đăng nhập</a>
                                         </div>
                                     </form>
                                 </div>
