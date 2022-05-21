@@ -1,7 +1,7 @@
 <?php
 
-require_once($_SERVER['DOCUMENT_ROOT']."/models/user.php");
-require_once($_SERVER['DOCUMENT_ROOT']."/modules/db_module.php");
+require_once($_SERVER['DOCUMENT_ROOT']."/dashboard/vouchery/models/user.php");
+require_once($_SERVER['DOCUMENT_ROOT']."/dashboard/vouchery/modules/db_module.php");
 
 class UserModel
 {
@@ -11,22 +11,22 @@ class UserModel
     public function signup()
     {
         if ($this->emptyInputSignup() == false) {
-            header("Location: index.php?msg=loginemptyinput");
+            header("Location: signup.php?msg=signupemptyinput");
             exit();
         }
         if ($this->passwordMatch() == false) {
-            header("Location: index.php?msg=loginpasswordnotmatch");
+            header("Location: signup.php?msg=signuppasswordnotmatch");
             exit();
         }
         if ($this->userTaken() == false) {
-            header("Location: index.php?msg=loginusertaken");
+            header("Location: signup.php?msg=signupusertaken");
             exit();
         }
         if ($this->setUser() == false) {
-            header("Location: index.php?msg=loginfail");
+            header("Location: signup.php?msg=signupfail");
             exit();
         } else {
-            header("Location: index.php?msg=loginsuccess");
+            header("Location: login.php?msg=signupsuccess");
             exit();
         }
     }
@@ -232,6 +232,6 @@ class UserModel
     public function logout()
     {
         session_destroy();
-        header("Location: index.php?msg=logoutsuccess");
+        header("Location: user_invoke.php?msg=logoutsuccess");
     }
 }
