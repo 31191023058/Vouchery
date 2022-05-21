@@ -8,7 +8,7 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/ulg/popper.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
-        <link rel="stylesheet" href="/dashboard/vouchery/styles/style.css">
+        <link rel="stylesheet" href="/styles/style.css">
         <script src="/scripts/script.js"></script>
     </head>
     <body>
@@ -73,7 +73,7 @@
             <main class="content dynamic-container">
                 <div id="products-holder" class="products-holder row">
                 <?php
-                    require_once($_SERVER['DOCUMENT_ROOT']."/dashboard/vouchery/controllers/filter_controller.php");
+                    require_once($_SERVER['DOCUMENT_ROOT']."/controllers/filter_controller.php");
                     $controller = new FilterController();
                     $controller->category_invoke();
                 ?>

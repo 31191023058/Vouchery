@@ -8,7 +8,7 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/ulg/popper.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
-        <link rel="stylesheet" href="/dashboard/vouchery/styles/style.css">
+        <link rel="stylesheet" href="/styles/style.css">
         <script src="/scripts/script.js"></script>
     </head>
     <body>
@@ -49,22 +49,12 @@
                         <div class="col-6 col-lg-3 nav-element">
                             <i class="bi-shopee"></i>
                             <label>Shopee</label>
-                            <a href="category.php?placeid=shopee" class="stretched-link"></a>
+                            <a href="category.php?placeid=1" class="stretched-link"></a>
                         </div>
                         <div class="col-6 col-lg-3 nav-element">
                             <i class="bi-lazada"></i>
                             <label>Lazada</label>
-                            <a href="category.php?placeid=lazada" class="stretched-link"></a>
-                        </div>
-                        <div class="col-6 col-lg-3 nav-element">
-                            <i class="bi-laptop"></i>
-                            <label>MÁY TÍNH XÁCH TAY</label>
-                            <a href="laptop_category.php" class="stretched-link"></a>
-                        </div>
-                        <div class="col-6 col-lg-3 nav-element">
-                            <i class="bi-headphones"></i>
-                            <label>PHỤ KIỆN</label>
-                            <a href="accessories_category.php" class="stretched-link"></a>
+                            <a href="category.php?placeid=2" class="stretched-link"></a>
                         </div>
                     </div>
                 </div>
@@ -76,7 +66,7 @@
                 <div id="phones-carousel" style="min-height: 425px;" class="carousel slide my-carousel" data-ride="carousel">
                     <div class="carousel-inner">
                         <?php 
-                            require_once($_SERVER['DOCUMENT_ROOT']."/dashboard/vouchery/controllers/index_controller.php");
+                            require_once($_SERVER['DOCUMENT_ROOT']."/controllers/index_controller.php");
                             $controller = new IndexController();
                             $controller->product_invoke();
                         ?>

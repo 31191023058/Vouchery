@@ -1,6 +1,6 @@
 <?php
     require_once("product.php");
-    require_once($_SERVER['DOCUMENT_ROOT']."/dashboard/vouchery/modules/db_module.php");
+    require_once($_SERVER['DOCUMENT_ROOT']."/modules/db_module.php");
 
     class IndexModel{
         public function getProductList(){

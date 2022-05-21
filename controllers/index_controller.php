@@ -1,5 +1,5 @@
 <?php
-    require_once($_SERVER['DOCUMENT_ROOT']."/dashboard/vouchery/models/index_model.php");
+    require_once($_SERVER['DOCUMENT_ROOT']."/models/index_model.php");
     class IndexController{
         public $model;
         public function __construct()

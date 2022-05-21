@@ -1,5 +1,5 @@
 <?php
-    require_once($_SERVER['DOCUMENT_ROOT']."/dashboard/vouchery/models/filter_model.php");
+    require_once($_SERVER['DOCUMENT_ROOT']."/models/filter_model.php");
     class FilterController{
         public $model;
         public function __construct()
@@ -9,13 +9,13 @@
         public function category_invoke(){
             if(isset($_GET['placeid']))
             {
-                    $category = "place";
+                    $category = $_GET['placeid'];
                     $product = $this-> model->getplace($category);
             }
             else{
                 if(isset($_GET['typeid']))
                 {
-                        $category = "type";
+                        $category = $_GET['typeid'];
                         $product = $this-> model->gettype($category);
                 }
                 else{
