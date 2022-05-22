@@ -1,5 +1,5 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT']."/dashboard/vouchery/models/product_model.php");
+require_once($_SERVER['DOCUMENT_ROOT']."/models/product_model.php");
 
 class ProductController {
     public $productmodel;

@@ -2,7 +2,7 @@
 require_once("product_place.php");
 require_once("product_type.php");
 require_once("product.php");
-require_once($_SERVER['DOCUMENT_ROOT'] . "/dashboard/Vouchery/modules/db_module.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/modules/db_module.php");
 
 class ProductModel
 {

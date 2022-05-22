@@ -1,7 +1,7 @@
 <?php
 
-require_once($_SERVER['DOCUMENT_ROOT']."/dashboard/vouchery/models/user.php");
-require_once($_SERVER['DOCUMENT_ROOT']."/dashboard/vouchery/modules/db_module.php");
+require_once($_SERVER['DOCUMENT_ROOT']."/models/user.php");
+require_once($_SERVER['DOCUMENT_ROOT']."/modules/db_module.php");
 
 class UserModel
 {

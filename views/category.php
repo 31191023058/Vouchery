@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Máy tính bảng - Mobile Planet</title>
+        <title>Vouchery</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -16,7 +16,7 @@
 
             <header class="header">
                 <div class="dynamic-container">
-                    <a href="index.php" style="color: black;"><h3 class="my-title">mobileplanet.com</h3></a>
+                    <a href="index.php" style="color: black;"><h3 class="my-title">Vouchery</h3></a>
                     <div class="menu-group">
                         <form class="form-group form-outline float-left" action="search.php" method="$_GET">
                             <div class="form-group form-outline float-left">
@@ -30,7 +30,7 @@
                         <button type="button" class="btn my-button float-left">
                             <i class="bi-cart"></i>
                             <a href="cart_invoke.php">
-                                <span class="top-button-text">Giỏ hàng</span>
+                                <span class="top-button-text">Giao dịch</span>
                             </a>
                         </button>
                         <button type="button" class="btn my-button float-left">
@@ -46,25 +46,29 @@
             <nav class="nav-bar">
                 <div class="dynamic-container">
                     <div class="row">
-                        <div class="col-6 col-lg-3 nav-element">
-                            <i class="bi-phone"></i>
-                            <label>ĐIỆN THOẠI DI ĐỘNG</label>
-                            <a href="phone_category.php" class="stretched-link"></a>
+                    <div class="col-4 col-lg-2 nav-element">
+                            <label>Shopee</label>
+                            <a href="category.php?placeid=1" class="stretched-link"></a>
                         </div>
-                        <div class="col-6 col-lg-3 nav-element">
-                            <i class="bi-tablet"></i>
-                            <label>MÁY TÍNH BẢNG</label>
-                            <a href="tablet_category.php" class="stretched-link"></a>
+                        <div class="col-4 col-lg-2 nav-element">
+                            <label>Lazada</label>
+                            <a href="category.php?placeid=2" class="stretched-link"></a>
                         </div>
-                        <div class="col-6 col-lg-3 nav-element">
-                            <i class="bi-laptop"></i>
-                            <label>MÁY TÍNH XÁCH TAY</label>
-                            <a href="laptop_category.php" class="stretched-link"></a>
+                        <div class="col-4 col-lg-2 nav-element">
+                            <label>Tiki</label>
+                            <a href="category.php?placeid=3" class="stretched-link"></a>
                         </div>
-                        <div class="col-6 col-lg-3 nav-element">
-                            <i class="bi-headphones"></i>
-                            <label>PHỤ KIỆN</label>
-                            <a href="accessories_category.php" class="stretched-link"></a>
+                        <div class="col-4 col-lg-2 nav-element">
+                            <label>Sendo</label>
+                            <a href="category.php?placeid=4" class="stretched-link"></a>
+                        </div>
+                        <div class="col-4 col-lg-2 nav-element">
+                            <label>Freeship</label>
+                            <a href="category.php?typeid=1" class="stretched-link"></a>
+                        </div>
+                        <div class="col-4 col-lg-2 nav-element">
+                            <label>Giảm giá</label>
+                            <a href="category.php?typeid=2" class="stretched-link"></a>
                         </div>
                     </div>
                 </div>
@@ -83,7 +87,7 @@
             <footer class="footer">
                 <div class="dynamic-container">
                     <div class="float-left">
-                        <h6>CÔNG TY CỔ PHẦN HÀNH TINH DI ĐỘNG</h6>
+                        <h6>CÔNG TY CỔ PHẦN VĂN A</h6>
                         <label>123 - 124 Nguyễn Văn A, Phường 2, Quận 10, TP. Hồ Chí Minh</label>
                         <h6>Liên hệ:</h6>
                         <label>0901 0000 - 0902 0000</label><br/>

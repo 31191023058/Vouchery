@@ -7,12 +7,8 @@
             $this->model = new DetailModel();
         }
         public function product_detail_invoke($id){
-            $spec =$this->model->getSpec($id);
             $product=$this->model->getProduct($id);
-            $review=$this->model->getReview($id);
             include "detail_view.php";   
         }
-
-        
     }
 ?>

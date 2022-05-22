@@ -1,5 +1,5 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . "/dashboard/vouchery/models/user_model.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/models/user_model.php");
 
 class UserController
 {
@@ -16,9 +16,9 @@ class UserController
         if (isset($_SESSION['user_id'])) {
             $this->clickLogout();
             $this->clickUpdate();
-            include($_SERVER['DOCUMENT_ROOT'] . "/dashboard/vouchery/views/user_profile.php");
+            include($_SERVER['DOCUMENT_ROOT'] . "/views/user_profile.php");
         } else {
-            include($_SERVER['DOCUMENT_ROOT'] . "/dashboard/vouchery/views/login.php");
+            include($_SERVER['DOCUMENT_ROOT'] . "/views/login.php");
         }
     }
 
